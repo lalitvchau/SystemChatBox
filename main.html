@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ'
+        crossorigin='anonymous'>
+    <meta charset="utf-8">
+    <title>BotUI - Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+        .detailChat {
+            position: fixed;
+            bottom: 115px;
+            right: 20px;
+            height: 60%;
+            width: 250px;
+            visibility: hidden;
+            background-color: rgb(255, 255, 255);
+            vertical-align: bottom;
+            transition: max-height 2s ease-out;
+            
+        }
+
+        iframe {
+            height: 100%;
+            width: 100%;
+            border-color: blueviolet;
+            box-shadow: 0 2px 5px #000000;
+            border-radius:10px;
+            padding: 0%;
+        }
+
+        .headingCHat {
+            cursor: pointer;
+            position: fixed;
+            right: 20px;
+            bottom: 60px;
+
+            color: white;
+            text-align: center;
+            text-shadow: 0 1px 5px #000000;
+            ;
+
+            padding: 0%;
+        }
+
+        .headingCHat:hover {
+
+            text-shadow: 0 1px 5px rgb(228, 228, 228), 0 0 10px rgb(44, 42, 42);
+            ;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        var handleChat = function () {
+            var detailChat = document.getElementById("detailChat");
+            var headingCHat = document.getElementById("headingCHat");
+            if (detailChat.style.visibility == "visible") {
+                detailChat.style.visibility = "hidden"
+                headingCHat.style.bottom = '60px';
+            }
+            else {
+                detailChat.style.visibility = "visible"
+            }
+        }
+    </script>
+
+
+
+
+    <div>
+        <i class='fas fa-question-circle headingCHat' onclick="handleChat()" style='font-size:48px;color:rgb(71, 5, 133)' id="headingCHat">
+            </i>
+    </div>
+    <div class="detailChat" id="detailChat">
+        <iframe src="index.html">
+
+        </iframe>
+    </div>
+
+
+
+</body>
+
+</html>
